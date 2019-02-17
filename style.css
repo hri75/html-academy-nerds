@@ -1,0 +1,19 @@
+.site-navigation li {
+    display: inline-block;
+}
+
+.features {
+    border: 1px dashed black;
+}
+
+.services {
+    border: 1px dashed black;
+}
+
+.indicators-item {
+    display: inline-block;
+}
+
+.examples-item {
+    display: inline-block;
+}
