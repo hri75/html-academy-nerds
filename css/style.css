@@ -1,0 +1,396 @@
+/*-------------------------------------------------*/
+/* ДЛЯ ВСЕГО ДОКУМЕНТА
+/*-------------------------------------------------*/
+
+body {
+    margin: 0;
+    padding: 0;
+
+    /* самый часто встречающийся шрифт пишем в body*/
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #283136;
+    /*text-transform: uppercase;*/
+
+    background: #ffffff;
+    /*background-image:  url("../img/bg.jpg");*/
+    /*background-position: top center;*/
+    /*background-repeat: no-repeat;*/
+}
+
+a {
+    text-decoration: none; /*ссылка - без подчеркивания*/
+}
+
+
+.button {
+    font-family: "Roboto", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 18px;
+    font-weight: 500;
+    color: #ffffff;
+
+    text-align: center;
+    vertical-align: middle;
+    text-transform: uppercase;
+
+    background-color: black; /*#fb565a;*/
+    border: none;
+}
+
+.button-main {
+    background-color: #fb565a;
+}
+
+.button-main:hover,
+.button-main:focus {
+    background-color: #e74246;
+}
+
+.button-main:active {
+    background-color: #d7373b;
+}
+
+/*--------------------------------------------*/
+
+.button-second {
+    background-color: #00ca74;
+}
+
+.button-second:hover,
+.button-second:focus {
+    background-color: #00bc6c;
+}
+
+.button-second:active {
+    background-color: #00aa62;
+}
+
+/*--------------------------------------------*/
+
+.button-third {
+    background-color: #efc849;
+}
+
+.button-third:hover,
+.button-third:focus {
+    background-color: #eab534;
+}
+
+.button-third:active {
+    background-color: #e5a722;
+}
+
+/*-------------------------------------------------*/
+/* HEADER
+/*-------------------------------------------------*/
+.primary-navigation {
+    font-size: 16px;
+    line-height: 30px;
+    color: #000000;
+
+    background-color: #eeeeee;
+}
+
+.site-navigation,
+.purchase-navigation {
+    list-style: none; /*убрали маркер у списка (точечку)*/
+}
+
+.site-navigation a,
+.purchase-navigation a {
+    color: #000000; /*ссылки не наследуют цвет от текста, им отдельно задается цвет*/
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.site-navigation a:hover,
+.site-navigation a:focus,
+.purchase-navigation a:hover,
+.purchase-navigation a:focus {
+    color: #fb565a; /* при наведении на ссылку - чтобы красным*/
+}
+
+.site-navigation-current {
+    text-decoration: underline; /*ссылка - c подчеркиванием*/
+}
+
+/*-------------------------------------------------*/
+/* end of HEADER
+/*-------------------------------------------------*/
+
+/*-------------------------------------------------*/
+/* MAIN
+/*-------------------------------------------------*/
+
+.features {
+    background-color: #eeeeee;
+}
+
+.slogan-1 {
+    font-weight: 500;
+    font-size: 55px;
+    line-height: 55px;
+    color: #000000;
+}
+
+.slogan-2 {
+    font-weight: 500;
+    font-size: 45px;
+    line-height: 45px;
+    color: #000000;
+}
+
+.slogan-3 {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.services-list {
+    list-style: none; /*убрали маркер у списка (точечку)*/
+}
+
+.services-item {
+    text-align: left;
+}
+
+.service-name{
+    font-size: 24px;
+    line-height: 30px;
+    color: #000000;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/*---- секция About ----*/
+.about li {
+    list-style: none; /*убрали маркер у списка (точечку)*/
+}
+
+.percent-number {
+    font-size: 45px;
+    line-height: 10px;
+    color: #000000;
+    font-weight: 700;
+
+}
+
+/*---- окончание секции About ----*/
+
+/*-------------------------------------------------*/
+/* end of MAIN
+/*-------------------------------------------------*/
+
+
+/*-------------------------------------------------*/
+/* FOOTER
+/*-------------------------------------------------*/
+
+.footer-contacts {
+    background-color: #ffffff;
+}
+
+.contact-header {
+    font-size: 18px;
+    line-height: 30px;
+    color: #000000;
+    font-weight: 700;
+}
+
+.contact-address,
+.contact-phone {
+    font-size: 16px;
+    line-height: 18px;
+    color: #666666;
+    font-weight: 400;
+}
+
+.social-header {
+    font-size: 36px;
+    line-height: 36px;
+    color: #000000;
+    font-weight: 700;
+}
+
+.social-discount {
+    font-size: 16px;
+    line-height: 22px;
+    color: #444444;
+    font-weight: 400;
+}
+
+.footer-social li{
+    list-style: none; /*убрали маркер у списка (точечку)*/
+}
+
+
+/*-------------------------------------------------------------*/
+/* Стиль для внутренних страниц*/
+/*-------------------------------------------------------------*/
+
+/*.inner-page {*/
+    /*color: #000000;*/
+
+    /*background-color: #f9f6f3;*/
+    /*background-image: url("../img/pattern-light.jpg");*/
+    /*background-position: 0 0;*/
+    /*background-repeat: repeat;*/
+/*}*/
+
+/*.page-title {*/
+    /*font-size: 30px;*/
+    /*line-height: 42px;*/
+/*}*/
+
+/*.breadcrumbs {*/
+    /*list-style-type: none;*/
+/*}*/
+
+/*.breadcrumbs a {*/
+    /*color: #000000; !*ссылки не наследуют цвет от текста, им отдельно задается цвет*!*/
+/*}*/
+
+/*.breadcrumbs a:hover,*/
+/*.breadcrumbs a:focus {*/
+    /*text-decoration: underline;*/
+/*}*/
+
+/*.breadcrumbs-current {*/
+    /*color: #aba9a7;*/
+/*}*/
+
+/*.filters fieldset {*/
+    /*border: none;*/
+/*}*/
+
+/*.filters legend {*/
+    /*font-size: 24px;*/
+    /*line-height: 30px;*/
+/*}*/
+
+/*.filters ul {*/
+    /*list-style: none;*/
+    /*line-height: 18px;*/
+/*}*/
+
+/*.filters label:hover,*/
+/*.filters label:focus {*/
+    /*color: #663d15;*/
+/*}*/
+
+/*.filter-input:disabled + label {*/
+    /*color: #000000;*/
+    /*opacity: 0.5;*/
+/*}*/
+
+/*.catalog ul {*/
+    /*list-style: none;*/
+/*}*/
+
+/*.catalog-item {*/
+    /*background-color: #f8f8f8;*/
+    /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
+/*}*/
+
+/*.catalog-item:hover {*/
+    /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); !* тень немного усилили*!*/
+/*}*/
+
+/*.catalog-category {*/
+    /*text-transform: none;*/
+/*}*/
+
+/*.catalog-item h3 {*/
+    /*color: #000000;*/
+    /*font-size: 14px;*/
+    /*line-height: 18px;*/
+/*}*/
+
+/*.catalog-item-price b {*/
+    /*font-size:14px;*/
+    /*line-height: 20px;*/
+    /*text-align: center;*/
+    /*background-color: #e5e5e5;*/
+/*}*/
+
+/*.catalog-item-price  .button {*/
+    /*line-height: 20px;*/
+    /*color: #ffffff;*/
+/*}*/
+
+/*.product-photos ul,*/
+/*.product-info ul {*/
+    /*list-style-type: none;*/
+/*}*/
+
+/*.product-info h3 {*/
+    /*font-size: 24px;*/
+    /*line-height: 30px;*/
+/*}*/
+
+/*.product-photo-preview li {*/
+    /*box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);*/
+/*}*/
+
+/*.product-photo-preview li:hover {*/
+    /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); !* тень немного усилили*!*/
+/*}*/
+
+/*.product-photo-full {*/
+    /*box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.1);*/
+/*}*/
+
+/*.product-article-number {*/
+    /*text-align: right;*/
+    /*color: #aeaeae;*/
+/*}*/
+
+/*.product-price b {*/
+    /*font-size:14px;*/
+    /*line-height: 20px;*/
+    /*text-align: center;*/
+    /*background-color: #e5e5e5;*/
+/*}*/
+
+/*.product-price .button {*/
+    /*line-height: 20px;*/
+    /*color: #ffffff;*/
+/*}*/
+
+/*.kit-item {*/
+    /*font-size: 14px;*/
+    /*line-height: 24px;*/
+/*}*/
+
+/*.pagination-item a{*/
+    /*color: #ffffff;*/
+    /*background-color: #000000;*/
+/*}*/
+
+/*.pagination-item a:hover,*/
+/*.pagination-item a:active,*/
+/*.pagination-item a:focus {*/
+    /*color: #ffffff;*/
+    /*background-color: #663d15;*/
+/*}*/
+
+/*.pagination-item-current a{*/
+    /*color: #000000;*/
+    /*background-color: #ffffff;*/
+/*}*/
+
+/*.pagination-item a:hover,*/
+/*.pagination-item a:active,*/
+/*.pagination-item a:focus {*/
+    /*color: #000000;*/
+    /*background-color: #ffffff;*/
+/*}*/
+
+/* ----------------------------------*/
+/* окончание секции "Стиль для внутренних страниц" */
+/* ----------------------------------*/
