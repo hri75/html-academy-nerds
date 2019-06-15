@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Nerds</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="primary-header">
+        <a class="primary-header-logo" href="index.html">
+            <img src="img/logo.svg" width="160" height="65" alt="Логотип студии Нердс">
+        </a>
+        <nav class="primary-navigation">
+            <ul class="site-navigation">
+                <li><a href="#">Студия</a></li>
+                <li><a href="#">Клиенты</a></li>
+                <li><a href="#">Магазин</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+            <ul class="purchase-navigation">
+                <li><a href="#">Корзина</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="container">
+        <h1 class="page-title">Магазин готовых шаблонов</h1>
+
+        <section class="filters">
+            <h2 class="visually-hidden">Фильтр шаблонов</h2>
+
+            <form class="filters-form" action="https://echo.htmlacademy.ru" method="get">
+
+                <fieldset class="cost">
+                    <legend>Стоимость:</legend>
+                    <input type="range" min="0" max="15000">
+                    <ul>
+                        <li>
+                            <label for="id-cost-begin">От</label>
+                            <input type="text" id="id-cost-begin" name="cost-begin" value="0">
+                        </li>
+                        <li>
+                            <label for="id-cost-end">До</label>
+                            <input type="text" id="id-cost-end" name="cost-end" value="15000">
+                        </li>
+                    </ul>
+                </fieldset>
+
+                <fieldset class="grid-options">
+                    <legend>Сетка:</legend>
+                    <ul>
+                        <li class="filters-option">
+                            <input type="radio" id="id-grid-radio-adaptive" name="grid-radio" value="adaptive" checked>
+                            <label for="id-grid-radio-adaptive">Адаптивная</label>
+                        </li>
+                        <li class="filters-option">
+                            <input type="radio" id="id-grid-radio-fixed" name="grid-radio" value="fixed">
+                            <label for="id-grid-radio-fixed">Фиксированная</label>
+                        </li>
+                        <li class="filters-option">
+                            <input type="radio" id="id-grid-radio-rubber" name="grid-radio" value="rubber">
+                            <label for="id-grid-radio-rubber">Резиновая</label>
+                        </li>
+                    </ul>
+                </fieldset>
+
+                <fieldset class="features">
+                    <legend>Особенности:</legend>
+                    <ul>
+                        <li class="filters-option">
+                            <input type="checkbox" id="id-feature-slider" name="feature-slider" checked>
+                            <label for="id-feature-slider">Слайдер</label>
+                        </li>
+                        <li class="filters-option">
+                            <input type="checkbox" id="id-feature-advantage-block" name="feature-advantage-block">
+                            <label for="id-feature-advantage-block">Блок преимуществ</label>
+                        </li>
+                        <li class="filters-option">
+                            <input type="checkbox" id="id-feature-news" name="feature-news" checked>
+                            <label for="id-feature-news">Новости</label>
+                        </li>
+                        <li class="filters-option">
+                            <input type="checkbox" id="id-feature-gallery" name="feature-gallery">
+                            <label for="id-feature-gallery">Галерея</label>
+                        </li>
+                        <li class="filters-option">
+                            <input type="checkbox" id="id-feature-shopping-cart" name="feature-shopping-cart">
+                            <label for="id-feature-shopping-cart">Корзина</label>
+                        </li>
+                    </ul>
+                </fieldset>
+
+                <input class="filter-button" type="submit" value="Показать">
+
+            </form>
+        </section>
+
+        <section class="sorting">
+            <h2>Сортировать:</h2>
+            <ul>
+                <li>
+                    <a>По цене</a>
+                    <a>По типу</a>
+                    <a>По названию</a>
+                    <a>Н</a>
+                    <a>В</a>
+                </li>
+            </ul>
+        </section>
+
+        <section class="catalog">
+            <h2 class="visually-hidden">Список шаблонов</h2>
+            <ul class="catalog-list">
+                <li class="catalog-item">
+                    <a>
+                    <h3 class="catalog-item-name">SEDONA</h3>
+                    <p class="catalog-item-description">Информационный сайт для туристов</p>
+                    <p class="catalog-item-price">9 900 руб.</p>
+                    <p>
+                        <img class="catalog-item-pic" src="img/sedona-pic.jpg" alt="Седона">
+                    </p>
+                    </a>
+                </li>
+                <li class="catalog-item">
+                    <a>
+                        <h3 class="catalog-item-name">Pink</h3>
+                        <p class="catalog-item-description">Сайт приложения Пинк</p>
+                        <p class="catalog-item-price">9 900 руб.</p>
+                        <p>
+                            <img class="catalog-item-pic" src="img/pink-pic.jpg" alt="Пинк">
+                        </p>
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="pagination-list">
+                <li class="pagination-item"><a>1</a></li>
+                <li class="pagination-item"><a>2</a></li>
+                <li class="pagination-item"><a>3</a></li>
+                <li class="pagination-item"><a>Следующая</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="primary-footer">
+        <div class="footer-contacts">
+            <p class="contact-header">NЁRDS DESIGN STUDIO</p>
+            <p class="contact-address">191186, Санкт-Петербург,<br>ул. Б. Конюшенная, д. 19/8</p>
+            <p class="contact-phone">тел. +7 (812) 275-75-75</p>
+            <a class="button" href="#">Напишите нам</a>
+        </div>
+
+        <div class="footer-social">
+            <p class="social-header">Давайте дружить, это выгодно!</p>
+            <p class="social-discount">Скидка 10% для друзей из социальных сетей.</p>
+            <ul>
+                <li><a class="social-button" href="#">ВКонтакте</a> </li>
+                <li><a class="social-button" href="#">Фейсбук</a> </li>
+                <li><a class="social-button" href="#">Инстаграмм</a> </li>
+            </ul>
+        </div>
+    </footer>
+</body>
+</html>
