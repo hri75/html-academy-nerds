@@ -2,6 +2,37 @@
 /* ДЛЯ ВСЕГО ДОКУМЕНТА
 /*-------------------------------------------------*/
 
+/*Шрифт:*/
+/*400 - Regular*/
+/*500 - Medium*/
+/*700 - Bold*/
+
+/*-----------------------------------------*/
+/* специальный класс для скрытия элементов */
+/*-----------------------------------------*/
+.visually-hidden {
+    /* Удаляем элемент из потока документа */
+    position: absolute;
+    /* Временное решение для неверно произносимого, размазанного текста */
+    white-space: nowrap;
+    /* Устанавливаем минимально возможный размер (некоторые скринридеры игнорируют элементы с нулевой высотой и шириной) */
+    width: 1px;
+    height: 1px;
+    /* Скрываем вылезающий за границы контент */
+    overflow: hidden;
+    /* Сбрасываем любые свойства, которые могут повлиять на размер элемента */
+    border: 0;
+    padding: 0;
+    /* Вырезаем ту часть контента, которая должна отображаться. */
+    /* Устаревшее свойство clip для старых браузеров */
+    clip: rect(0 0 0 0);
+    /* clip-path для новых браузеров. inset(50%) определяет область вставки, которая позволит контенту исчезнуть.  */
+    clip-path: inset(50%);
+    /* Похоже, никто до конца не понимает, почему тут margin: -1px. Кроме того, это приводит к проблемам (читай: https://github.com/h5bp/html5-boilerplate/issues/1985). */
+    margin: -1px;
+}
+/*--------------------------------------*/
+
 body {
     margin: 0;
     padding: 0;
@@ -83,20 +114,57 @@ a {
     background-color: #e5a722;
 }
 
+.centraler { /*доп.контейнер для центрирования ("центровщик")*/
+    width: 1160px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    /*border: 0 1px dashed red;*/
+}
+
+li {
+    list-style: none; /*убрали маркер у списка (точечку)*/
+}
+
+
 /*-------------------------------------------------*/
 /* HEADER
 /*-------------------------------------------------*/
-.primary-navigation {
+
+.first-header {
+    padding-top: 50px;
+    min-width: 1180px;
+    background-color: #eeeeee;
+}
+
+.first-header-navigation {
     font-size: 16px;
     line-height: 30px;
     color: #000000;
+}
 
-    background-color: #eeeeee;
+.first-header-navigation-wrapper {
+    display: flex;
 }
 
 .site-navigation,
 .purchase-navigation {
     list-style: none; /*убрали маркер у списка (точечку)*/
+    display: flex;
+    justify-content: space-between;
+}
+
+.site-navigation {
+    width: 450px;
+    padding: 0;
+    margin-left: 200px;
+    /*margin-right: 240px;*/
+}
+
+
+.purchase-navigation {
+    margin-left: auto;
 }
 
 .site-navigation a,
@@ -125,8 +193,18 @@ a {
 /* MAIN
 /*-------------------------------------------------*/
 
+/*---- секция features ----*/
+
 .features {
     background-color: #eeeeee;
+    margin: 0;
+    padding: 0;
+    min-width: 1180px;
+    margin-bottom: 80px;
+}
+
+.features-columns {
+    display: flex;
 }
 
 .slogan-1 {
@@ -143,20 +221,33 @@ a {
     color: #000000;
 }
 
-.slogan-3 {
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 24px;
-    color: #000000;
-    text-transform: uppercase;
+
+
+
+/*---- секция services ----*/
+
+.services {
+    margin: 0;
+    padding: 0;
+    min-width: 1180px;
+    margin-bottom: 80px;
 }
+
 
 .services-list {
     list-style: none; /*убрали маркер у списка (точечку)*/
+    margin: 0;
+    padding: 0;
+    display: flex;
 }
 
 .services-item {
     text-align: left;
+    margin-right: 100px;
+}
+
+.services-item:nth-child(3) { /*у третьего элемента сбрасываем правую границу (отступ)*/
+    margin-right: 0;
 }
 
 .service-name{
@@ -168,8 +259,34 @@ a {
 }
 
 /*---- секция About ----*/
-.about li {
-    list-style: none; /*убрали маркер у списка (точечку)*/
+
+.about {
+    margin: 0;
+    padding: 0;
+    min-width: 1180px;
+    margin-bottom: 80px;
+}
+
+.about-columns {
+    display: flex;
+}
+
+.about-column:nth-child(2) {
+    margin-left: auto;
+}
+
+.indicators {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.indicators li {
+    margin-right: 20px;
+}
+
+.indicators li:nth-child(3) { /*у третьего элемента сбрасываем правую границу (отступ)*/
+    margin-right: 0;
 }
 
 .percent-number {
@@ -177,6 +294,32 @@ a {
     line-height: 10px;
     color: #000000;
     font-weight: 700;
+}
+
+.slogan-3 {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+    text-transform: uppercase;
+}
+
+.slogan-4 {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000000;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.examples {
+    margin: 0;
+    padding: 0;
+    height: 180px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
 }
 
@@ -191,9 +334,33 @@ a {
 /* FOOTER
 /*-------------------------------------------------*/
 
+.backgound-map {
+    box-sizing: border-box;
+    height: 416px;
+    min-width: 1180px;
+    padding-top: 55px;
+    background-color: #eeeeee;
+    background-image:  url("../img/map.jpg");
+
+}
+
 .footer-contacts {
+    box-sizing: border-box;
+    width: 319px;
+    height: 308px;
+    padding-left: 50px;
+    padding-top: 55px;
     background-color: #ffffff;
 }
+
+.footer-contacts p {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+
+
 
 .contact-header {
     font-size: 18px;
@@ -210,11 +377,44 @@ a {
     font-weight: 400;
 }
 
+
+
+.footer-social-columns {
+    margin: 0;
+    padding: 0;
+    height: 225px;
+    display: flex;
+    align-items: center;
+}
+
+.footer-social-column {
+    margin: 0;
+    padding: 0;
+}
+
+.footer-social-column:nth-child(1) {
+    margin-right: 135px;
+
+}
+
+.footer-social ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.footer-social li{
+    list-style: none; /*убрали маркер у списка (точечку)*/
+}
+
 .social-header {
     font-size: 36px;
     line-height: 36px;
     color: #000000;
     font-weight: 700;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
 }
 
 .social-discount {
@@ -222,16 +422,160 @@ a {
     line-height: 22px;
     color: #444444;
     font-weight: 400;
+    margin: 0;
+    padding: 0;
 }
 
-.footer-social li{
-    list-style: none; /*убрали маркер у списка (точечку)*/
-}
 
 
 /*-------------------------------------------------------------*/
 /* Стиль для внутренних страниц*/
 /*-------------------------------------------------------------*/
+
+.page-title {
+    box-sizing: border-box;
+    margin: 0;
+    margin-bottom: 60px;
+    padding-top: 70px;
+    min-width: 1180px;
+    height: 245px;
+    font-weight: 500;
+    font-size: 55px;
+    line-height: 55px;
+    color: #000000;
+    background-color: #eeeeee;
+    text-align: center;
+
+}
+
+.main-columns {
+    display: flex;
+}
+
+.filters {
+    width: 260px;
+}
+
+.filters fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+    margin-bottom: 40px;
+    /*border: 1px dashed green;*/
+}
+
+.filters legend {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: 700; /*bold - жирный*/
+    text-transform: uppercase;
+}
+
+.filters ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+.filters-option {
+    margin-bottom: 10px;
+}
+
+.filters label {
+    font-size: 16px;
+    line-height: 20px;
+}
+
+
+.filters label:hover,
+.filters label:focus {
+color: #663d15;
+}
+
+.filter-input:disabled + label {
+color: #000000;
+opacity: 0.5;
+}
+
+.sorting {
+    display: flex;
+}
+
+.catalog-list {
+    width: 760px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+
+    flex-wrap: wrap;
+    /*border: 1px dashed brown;*/
+}
+
+.catalog-item {
+    margin-right: 40px;
+}
+
+.catalog-item:nth-child(2n) {
+    margin-right: 0;
+}
+
+
+.pagination-list {
+    width: 440px;
+    display: flex;
+    margin: 0;
+    margin-bottom: 60px;
+    padding: 0;
+
+}
+
+.pagination-item {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    color: #000000;
+    background: #eeeeee;
+    margin-right: 10px;
+}
+
+.pagination-item:nth-child(4) {
+    width: 260px;
+    margin-right: 0;
+}
+
+.pagination-item a{
+    color: #000000;
+    background-color: #eeeeee;
+}
+
+.pagination-item a:hover,
+.pagination-item a:active,
+.pagination-item a:focus {
+    color: #ffffff;
+    background-color: #663d15;
+}
+
+.pagination-item-current {
+    box-sizing: border-box;
+    border: 4px solid #eeeeee;
+    color: #000000;
+    background-color: #ffffff;
+}
+
+
+.pagination-item-current a{
+    color: #000000;
+    background-color: #ffffff;
+}
+
+.pagination-item a:hover,
+.pagination-item a:active,
+.pagination-item a:focus {
+    color: #000000;
+    background-color: #ffffff;
+}
+
 
 /*.inner-page {*/
     /*color: #000000;*/
